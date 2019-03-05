@@ -1,7 +1,8 @@
 #! /bin/bash
 #
-# var kaustast .log file sõnade arv sorteeritud järjekorras
+# var kaustast .log lõpuga failid ridade arv sorteeritud kahanevas järjekorras
 #
-find /var/ -name "*.log" 2>/dev/null -exec wc -l '{}' \; | sort -n -r
+
+find /var/ -name "*.log" 2>/dev/null -exec wc -l '{}' \; | sort -n -r | cut -f2 -d " "
 
 #skripti lõpp
