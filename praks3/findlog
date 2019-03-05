@@ -4,5 +4,10 @@
 #
 
 find /var/ -name "*.log" 2>/dev/null -exec wc -l '{}' \; | sort -n -r | cut -f2 -d " "
+#find otsib /var/ kaustat õiged failid
+#2>/dev/null suunab errorid prügikasti
+#wc -l   loendab ridu
+# sort    sorteerib
+# cut lõikab üleliigsed numbrid välja
 
-#skripti lõpp
+###skripti lõpp
