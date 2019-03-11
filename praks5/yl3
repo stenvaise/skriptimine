@@ -1,0 +1,6 @@
+#! /bin/bash
+#Puhkusereis
+read -p "Kuna reisile lähed? " paev #mis päeval lähed
+read -p "Mitmeks päevaks? " aeg #mitu päeva reisil
+echo `expr \( $paev + $aeg \) % 7 ` #arvutab välja kuna tagasi jõuad
+#skripti lõpp
