@@ -1,0 +1,8 @@
+#! /bin/bash
+#
+#Kolmnurga pindala arvutamine Heroni valemiga
+read -p "Külje pikkus a (CM) " a
+read -p "Külje pikkus b (CM) " b
+read -p "Küle pikkus c (CM) " c
+#Kasutaja sisestatavad vajalikud mõõtmed valemile
+terve=`expr $a + $b + $c` #terve kolmnurga ümbermõõt
