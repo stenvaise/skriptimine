@@ -4,5 +4,10 @@
 read -p "Külje pikkus a (CM) " a
 read -p "Külje pikkus b (CM) " b
 read -p "Küle pikkus c (CM) " c
-#Kasutaja sisestatavad vajalikud mõõtmed valemile
+#Kasutaja sisestab vajalikud mõõtmed valemile
 terve=`expr $a + $b + $c` #terve kolmnurga ümbermõõt
+P=$(bc <<< "scale=2; ($terve)/2") #pool kolmnurga ümbermõõtu
+S=$(bc <<< "scale=2; $P*($P-$a)*($P-$b)*($P-$c)") #heroni valem
+#p=(bc <<< "scale=2; sqrt ($
+echo "Kolmnurga pindala on "$(bc <<< "scale=2; sqrt ($S)")" sentimeetrit ruudus."
+
