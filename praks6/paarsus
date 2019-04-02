@@ -2,7 +2,8 @@
 #
 if [ "$1" == "" ] #kui kasutaja väärtust ei sisesta 
 then
-	echo "Parameeter puudub." # väljastab vastuseks et parameeter puudub
+	echo "Parameeter puudub. Käivita skriptja sisesta koos käivitamisega täisarv"
+# väljastab vastuseks et parameeter puudub ja käseb täisarvuga koos käivitada
 else #kui väärtuse sisestab
 vaartus=$(( $1 % 2 )) # kas jääk jääb 2-ga jagamisel
 	if [ $vaartus -eq 0 ] # kui jääk võrdub 0-ga
