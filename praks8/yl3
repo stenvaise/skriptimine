@@ -1,11 +1,10 @@
 #/bin/bash
 #
 # Sisestatud arvu põhjal kuu nime välja stamine
-# Arvu sisse lugemine
-read -p "Sisestage kuu arv mille nime eesti keeles soovite saada " arv
+read -p "Sisestage kuu arv mille nime eesti keeles soovite saada " arv #arvu sisselugemine
 # Esimene pool väljundist
-echo -n "See on "
-# Teise poole väljundist leiab vastavalt case-le
+echo -n "See kuu on "
+# Teise poole väljundist leiab case
 case $arv in
 	"1") echo "jaanuar";;
 	"2") echo "veebruar";;
@@ -21,3 +20,5 @@ case $arv in
 	"12") echo "detsember";;
 	*) echo "väär sisend";;
 esac
+#
+#skripti lõpp
