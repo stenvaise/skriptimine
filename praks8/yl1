@@ -1,5 +1,5 @@
 #!/bin/bash
-# liidab 1-10  paarisarvud kokku
+# liidab paarisarvud vahemikus 1-10 kokku
 
 arvutus=0
 n=1
