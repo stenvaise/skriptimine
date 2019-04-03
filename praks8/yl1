@@ -1,3 +1,17 @@
 #!/bin/bash
+# liidab 1-10  paarisarvud kokku
+
+arvutus=0
+n=1
+for (( n=1; $n<11; n++)) #n on väiksem kui null
+do
+	jaak=$(bc <<< "$n % 2") #kas arv on paaris või paaritu
+	if [ $jaak -eq 0 ]; #kui on paaris ehk jääk on null
+	then
+		arvutus=$(bc <<< "$arvutus + $n")  #liidab paarisarvud juurde
+	fi
+done
+echo "Paarisarvude summa vahemikus 1 - 10 on $arvutus"
 #
+#skripti lõpp
 
