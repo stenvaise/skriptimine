@@ -1,0 +1,14 @@
+#!/bin/bash
+#arvutab sisestatud täisarvu numbrite summa
+read -p "Sisesta täisarv, mille numbrite summat soovid teada " arv #kasutajasisend
+summa=0 #algväärtus
+while [ $arv -ne 0 ] #arv ei võrdu nulliga
+do
+	jaak=$((arv % 10)) #10 jäägi leidmine
+	summa=$(($summa + $jaak)) #summale jäägi liitmine
+	arv=$(($arv / 10)) #arvu 10-ga jagamine
+done
+echo "Sinu arvu numbrite summa on" $summa #väljastab lõpptulemuse
+#
+#skripti lõpp
+
