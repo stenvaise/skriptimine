@@ -5,7 +5,7 @@ read -p "Sisesta ridade arv " rida
 read -p "Sisesta tärnide arv " arv
 for (( i = 1; i <= rida; i++ )) #määrab ridade arvu ülesandes
 do
-echo -n $i". "
+echo -n $i". " #lisab numbri ridade ette"
 	for (( j = 1 ; j <= arv; j++ )) #määrab tärnide arvu real
 	do
 		echo -n "*" #väljastab tärne reavahetuseta
