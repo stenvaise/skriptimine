@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#esimese 20 täisarvu algarvud
+#
+for (( arv=0; arv<=20; arv++ )) #for tsükkel alustab 0-st ja liidab koguaeg 1 juurde kuni 20ni
+do
+if [ $arv -eq 0 -o $arv -eq 1 ] # Kontrollib kas arv võrdub 1 või 0-ga
+then
+	echo "$arv - ei ole algarv" # väljastab vastuse
+else
+	jagaja=2 #jagaja väärtus
+	jaak=$(($arv % $jagaja)) # #jaagi arvutamine
+	while [ $jaak -ne 0 ] #kui jääk ei võrdu 0-ga
+	do
+		jagaja=$(($jagaja + 1)) #liidab 1 jagajale juurde
+		jaak=$(($arv % $jagaja)) #jaagi leidmine
+	done
+	if [ $arv -eq $jagaja ] #kui arv on võrdne jagajaga
+	then
+		echo "$arv - on algarv" #väljastab tulemuse
+	else
+		echo "$arv - ei ole algarv" #väljastab tulemuse
+	fi
+fi
+done
+#
+#skriptilopp
