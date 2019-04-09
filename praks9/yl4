@@ -1,0 +1,15 @@
+#!/bin/bash
+# Joonistab kujundi kasutaja sisestatud tärnide ja ridade arvuga
+#
+read -p "Sisesta ridade arv " rida 
+for (( i = 1; i <= rida; i++ )) #määrab ridade arvu ülesandes
+do
+echo -n $i". " #lisab numbri ridade ette"
+	for (( j = 1 ; j <= i; j++ )) #määrab tärnide arvu real
+	do
+		echo -n "*" #väljastab tärne reavahetuseta
+	done
+echo "" #reavahetuseks
+done
+#
+#skripti lõpp
