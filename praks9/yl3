@@ -1,0 +1,26 @@
+#!/bin/bash
+# Joonistab keskelt tühja ruudu kasutaja sisestatud tärnide ja ridade arvuga
+#
+read -p "Sisesta ridade arv " rida 
+read -p "Sisesta tärnide arv " arv
+for (( i = 1; i <= rida; i++ )) #määrab ridade arvu ülesandes
+do
+echo -n $i". " #lisab numbri ridade ette"
+	for (( j = 1 ; j <= arv; j++ )) #määrab tärnide arvu real
+	do
+		if [ $i -eq 1 -o $i -eq $arv ] #esimene ja viimane rida ainult tärnid
+			then
+			echo -n "*" #väljastab tärne reavahetuseta
+		else
+			if [ $j -eq 1 -o $j -eq $rida ]
+				then
+				echo -n "*"
+			else #teistel keskmisele osale tühikud
+			echo -n " "
+			fi
+		fi
+	done
+echo "" #reavahetuseks
+done
+#
+#skripti lõpp
