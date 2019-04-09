@@ -3,6 +3,7 @@
 #
 for (( i = 1; i <= 5; i++ )) #määrab ridade arvu ülesandes
 do
+echo -n $i". " #Numbrid ridade ette
 	for (( j = 1 ; j <= 5; j++ )) #määrab tärnide arvu real
 	do
 		echo -n "*" #väljastab tärne reavahetuseta
